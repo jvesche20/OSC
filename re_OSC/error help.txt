@@ -1,0 +1,23 @@
+If you are getting an error thats similar to this:
+
+ [ERROR] lua/vgui/dframe.lua:101: bad argument #1 to 'SetText' (string expected, got nil)
+  1. SetText - [C]:-1
+   2. SetTitle - lua/vgui/dframe.lua:101
+    3. CreateReLogConsoleUI - addons/re_osc/lua/autorun/client/cl_vgui.lua:83
+     4. ShowReLogConsoleUI - addons/re_osc/lua/autorun/client/cl_vgui.lua:107
+      5. unknown - LuaCmd:1
+
+It's because your server want's to be a pain in the ass and not read the congif files.
+
+What you need to do is 1 of 2 things either have me fix it but it could take a little more time for me to get back 
+to you, or you can do it your self its pretty easy.  Just take all the config and put it in manually.
+What this means is for example the first line of the config is this:
+
+serverName = "RE RE's On Screen Console"
+
+You need to find where "serverName" is in the cl_vgui.lua
+
+In this case it is line 83: re_log_frame:SetTitle( serverName ) change where it says serverName to (string) 
+"RE RE's On Screen Console" What ever you have in the quotes. You will need to do this with every config item.
+
+If this is not your error contact me on scriptfodder please and thankyou!
