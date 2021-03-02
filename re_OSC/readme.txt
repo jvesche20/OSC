@@ -1,4 +1,4 @@
-This addon is made by RE RE.
+This addon is made by Jacob.
 
 
 This addon comes with the On Screen console seen on script fodder.
